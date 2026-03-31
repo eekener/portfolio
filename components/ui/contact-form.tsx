@@ -30,7 +30,7 @@ export function ContactForm() {
     e.preventDefault();
     setStatus('loading');
     try {
-      const res = await fetch('/', {
+      const res = await fetch('/forms.html', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: encode({ 'form-name': 'contact', ...fields }),
@@ -79,7 +79,6 @@ export function ContactForm() {
       className="flex flex-col gap-4"
       noValidate
     >
-      {/* Required Netlify hidden fields */}
       <input type="hidden" name="form-name" value="contact" />
       <div hidden aria-hidden="true">
         <label>
@@ -140,7 +139,6 @@ export function ContactForm() {
         />
       </div>
 
-      {/* Error state */}
       {status === 'error' && (
         <div role="alert" className="flex items-center gap-2 text-sm text-red-400">
           <AlertCircle className="h-4 w-4 shrink-0" aria-hidden="true" />
