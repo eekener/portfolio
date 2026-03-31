@@ -88,16 +88,18 @@ export const TextStaggerHover = React.forwardRef<
           >
             <motion.span
               className="inline-block opacity-20"
-              initial={{ y: "0%" }}
-              animate={isActive ? { y: "-110%" } : { y: "0%" }}
+              style={{ willChange: 'transform' }}
+              initial={{ y: 0 }}
+              animate={isActive ? { y: -44 } : { y: 0 }}
             >
               {char}
               {char === " " && index < characters.length - 1 && <>&nbsp;</>}
             </motion.span>
             <motion.span
               className="absolute left-0 top-0 inline-block opacity-100"
-              initial={{ y: "110%" }}
-              animate={isActive ? { y: "0%" } : { y: "110%" }}
+              style={{ willChange: 'transform' }}
+              initial={{ y: 44 }}
+              animate={isActive ? { y: 0 } : { y: 44 }}
             >
               {char}
             </motion.span>
