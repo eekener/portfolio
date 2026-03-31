@@ -1,21 +1,23 @@
-'use client';
-
+import dynamic from 'next/dynamic';
+import React from 'react';
 import { Header } from '@/components/ui/header';
 import { HeroSection } from '@/components/ui/hero-section';
 import { FeatureCard } from '@/components/ui/grid-feature-cards';
-import { TestimonialsColumn } from '@/components/ui/testimonials-columns';
 import { HoverSlider, TextStaggerHover, HoverSliderImageWrap, HoverSliderImage } from '@/components/ui/animated-slideshow';
 import { NeoMinimalFooter } from '@/components/ui/neo-minimal-footer';
-import { ContactForm } from '@/components/ui/contact-form';
-import { ProjectCard } from '@/components/ui/project-card';
-import { motion, useReducedMotion } from 'motion/react';
+import { AnimatedSection } from '@/components/ui/animated-section';
+import { ProjectList } from '@/components/ui/project-list';
 import { buttonVariants } from '@/components/ui/button';
-import { projects } from '@/lib/projects';
-import React from 'react';
-import {
-  Code2, Layers, Zap, Shield, Wrench, ShoppingCart,
-  Mail, ChevronDown,
-} from 'lucide-react';
+import { Code2, Layers, Zap, Shield, Wrench, ShoppingCart, Mail } from 'lucide-react';
+
+const TestimonialsColumn = dynamic(
+  () => import('@/components/ui/testimonials-columns').then((m) => ({ default: m.TestimonialsColumn })),
+);
+
+const ContactForm = dynamic(
+  () => import('@/components/ui/contact-form').then((m) => ({ default: m.ContactForm })),
+  { ssr: false },
+);
 
 // ─── Data ────────────────────────────────────────────────
 
@@ -37,7 +39,7 @@ const features = [
   { title: 'Security',           icon: Shield,        description: 'Hardening, regular updates, backups, and malware monitoring to keep your WordPress site safe and online.' },
 ];
 
-const testimonials: { text: string; image?: string; name: string; role?: string }[] = [
+const testimonials = [
   {
     text: 'I can not say enough good things about Emre Ekener. I highly recommend him. He knows his stuff and he knows what it takes to get a website optimized, especially for speed improvement. His communication is excellent. He had things fixed and working much quicker than I expected. He always promptly responded back to any questions I had. He is very friendly and kind. I will definitely be using him again if there is a problem. Whoever is reading this, if you need work done to your website he is definitely the man to get it fixed!',
     name: 'Denise Davis',
@@ -129,25 +131,7 @@ const firstColumn  = testimonials.slice(0, 3);
 const secondColumn = testimonials.slice(3, 6);
 const thirdColumn  = testimonials.slice(6, 9);
 
-const PAGE_SIZE = 4;
-
-// ─── Helpers ─────────────────────────────────────────────
-
-function AnimatedSection({ children, className, delay = 0.1 }: { children: React.ReactNode; className?: string; delay?: number }) {
-  const shouldReduceMotion = useReducedMotion();
-  if (shouldReduceMotion) return <div className={className}>{children}</div>;
-  return (
-    <motion.div
-      initial={{ filter: 'blur(4px)', translateY: -8, opacity: 0 }}
-      whileInView={{ filter: 'blur(0px)', translateY: 0, opacity: 1 }}
-      viewport={{ once: true }}
-      transition={{ delay, duration: 0.8 }}
-      className={className}
-    >
-      {children}
-    </motion.div>
-  );
-}
+// ─── Icons ────────────────────────────────────────────────
 
 function GithubIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
@@ -168,10 +152,6 @@ function LinkedinIcon(props: React.SVGProps<SVGSVGElement>) {
 // ─── Page ─────────────────────────────────────────────────
 
 export default function Page() {
-  const [visibleCount, setVisibleCount] = React.useState(PAGE_SIZE);
-  const visibleProjects = [...projects].reverse().slice(0, visibleCount);
-  const hasMore = visibleCount < projects.length;
-
   return (
     <main id="main-content" className="min-h-screen bg-background text-foreground">
 
@@ -227,24 +207,7 @@ export default function Page() {
           <h2 className="text-4xl md:text-5xl font-bold tracking-tighter mt-2">Projects</h2>
         </AnimatedSection>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-          {visibleProjects.map((project) => (
-            <ProjectCard key={project.slug} {...project} />
-          ))}
-        </div>
-
-        {hasMore && (
-          <div className="mt-10 flex justify-center">
-            <button
-              onClick={() => setVisibleCount((c) => c + PAGE_SIZE)}
-              className={buttonVariants({ variant: 'outline', size: 'lg' })}
-              aria-label="Load more projects"
-            >
-              Load More
-              <ChevronDown className="ml-2 h-4 w-4" aria-hidden="true" />
-            </button>
-          </div>
-        )}
+        <ProjectList />
       </section>
 
       <div className="border-t border-border" />

@@ -1,3 +1,5 @@
+'use client';
+
 import { Button } from "@/components/ui/button";
 import { motion, type Variants, useReducedMotion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
