@@ -91,9 +91,9 @@ export function NeoMinimalFooter() {
             ]},
           ].map((section) => (
             <div key={section.title} className="col-span-6 md:col-span-2 flex flex-col gap-4">
-              <h4 className="text-xs font-mono font-semibold text-foreground/70 uppercase tracking-widest">
+              <p className="text-xs font-mono font-semibold text-foreground/70 uppercase tracking-widest">
                 {section.title}
-              </h4>
+              </p>
               <ul className="flex flex-col gap-3">
                 {section.links.map((link) => (
                   <li key={link.label}>
