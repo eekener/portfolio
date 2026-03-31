@@ -16,7 +16,6 @@ const TestimonialsColumn = dynamic(
 
 const ContactForm = dynamic(
   () => import('@/components/ui/contact-form').then((m) => ({ default: m.ContactForm })),
-  { ssr: false },
 );
 
 // ─── Data ────────────────────────────────────────────────
