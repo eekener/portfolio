@@ -113,8 +113,8 @@ export const TextStaggerHover = React.forwardRef<
 TextStaggerHover.displayName = "TextStaggerHover"
 
 export const clipPathVariants = {
-  visible: { clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)" },
-  hidden: { clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0px)" },
+  visible: { opacity: 1 },
+  hidden: { opacity: 0 },
 }
 
 export const HoverSliderImageWrap = React.forwardRef<

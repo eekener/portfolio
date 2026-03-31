@@ -8,9 +8,8 @@ export function HeroSection() {
   const shouldReduceMotion = useReducedMotion();
 
   const containerVariants: Variants = {
-    hidden: { opacity: shouldReduceMotion ? 1 : 0 },
+    hidden: {},
     visible: {
-      opacity: 1,
       transition: {
         staggerChildren: shouldReduceMotion ? 0 : 0.15,
         delayChildren: shouldReduceMotion ? 0 : 0.1,
@@ -19,9 +18,8 @@ export function HeroSection() {
   };
 
   const itemVariants: Variants = {
-    hidden: { opacity: shouldReduceMotion ? 1 : 0, y: shouldReduceMotion ? 0 : 20 },
+    hidden: { y: shouldReduceMotion ? 0 : 20 },
     visible: {
-      opacity: 1,
       y: 0,
       transition: { duration: shouldReduceMotion ? 0 : 0.5, ease: "easeOut" },
     },

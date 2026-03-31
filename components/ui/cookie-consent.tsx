@@ -9,8 +9,16 @@ export function CookieConsent() {
   const [visible, setVisible] = React.useState(false);
 
   React.useEffect(() => {
-    const stored = localStorage.getItem('cookie-consent');
-    if (!stored) setVisible(true);
+    const show = () => {
+      const stored = localStorage.getItem('cookie-consent');
+      if (!stored) setVisible(true);
+    };
+    if ('requestIdleCallback' in window) {
+      (window as Window & { requestIdleCallback: (cb: () => void, opts?: { timeout: number }) => void })
+        .requestIdleCallback(show, { timeout: 3000 });
+    } else {
+      setTimeout(show, 3000);
+    }
   }, []);
 
   const respond = (value: 'accepted' | 'declined') => {
