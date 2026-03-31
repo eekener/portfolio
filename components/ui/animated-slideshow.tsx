@@ -2,6 +2,7 @@
 
 import * as React from "react"
 import { HTMLMotionProps, MotionConfig, motion } from "motion/react"
+import Image from "next/image"
 import { cn } from "@/lib/utils"
 
 interface TextStaggerHoverProps {
@@ -134,19 +135,21 @@ export const HoverSliderImageWrap = React.forwardRef<
 HoverSliderImageWrap.displayName = "HoverSliderImageWrap"
 
 export const HoverSliderImage = React.forwardRef<
-  HTMLImageElement,
-  HTMLMotionProps<"img"> & HoverSliderImageProps
+  HTMLDivElement,
+  HTMLMotionProps<"div"> & HoverSliderImageProps
 >(({ index, imageUrl, children, className, ...props }, ref) => {
   const { activeSlide } = useHoverSliderContext()
   return (
-    <motion.img
-      className={cn("inline-block align-middle", className)}
+    <motion.div
+      className={cn("relative overflow-hidden", className)}
       transition={{ ease: [0.33, 1, 0.68, 1], duration: 0.8 }}
       variants={clipPathVariants}
       animate={activeSlide === index ? "visible" : "hidden"}
       ref={ref}
       {...props}
-    />
+    >
+      <Image fill src={imageUrl} alt="" sizes="288px" className="object-cover" />
+    </motion.div>
   )
 })
 HoverSliderImage.displayName = "HoverSliderImage"

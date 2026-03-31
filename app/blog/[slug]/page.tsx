@@ -8,6 +8,7 @@ import { buttonVariants } from '@/components/ui/button';
 import { ShareButtons } from '@/components/ui/share-buttons';
 import { ArrowLeft, ArrowRight, Clock } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import type { Metadata } from 'next';
 
 export async function generateStaticParams() {
@@ -63,10 +64,13 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       <main id="main-content">
       {/* Hero image */}
       <section className="relative h-[45vh] min-h-[360px] overflow-hidden">
-        <img
+        <Image
+          fill
+          priority
+          sizes="100vw"
           src={post.image}
           alt={post.title}
-          className="absolute inset-0 h-full w-full object-cover brightness-[0.3] saturate-50"
+          className="object-cover brightness-[0.3] saturate-50"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
         <div className="relative z-10 flex h-full flex-col justify-end px-4 pb-12 max-w-3xl mx-auto">

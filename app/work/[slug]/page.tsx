@@ -6,6 +6,7 @@ import { Badge } from '@/components/ui/badge';
 import { buttonVariants } from '@/components/ui/button';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import type { Metadata } from 'next';
 
 export async function generateStaticParams() {
@@ -57,10 +58,13 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
       <main id="main-content">
       {/* Hero */}
       <section className="relative h-[55vh] min-h-[420px] overflow-hidden">
-        <img
+        <Image
+          fill
+          priority
+          sizes="100vw"
           src={project.image}
           alt={project.title}
-          className="absolute inset-0 h-full w-full object-cover brightness-[0.35] saturate-50"
+          className="object-cover brightness-[0.35] saturate-50"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
         <div className="relative z-10 flex h-full flex-col justify-end px-4 pb-12 max-w-5xl mx-auto">
@@ -119,10 +123,12 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
               </div>
               {/* Screen — relative so absolute child can fill it */}
               <div className="relative aspect-[16/10] overflow-hidden bg-white">
-                <img
+                <Image
+                  fill
+                  sizes="(max-width: 768px) 100vw, 600px"
                   src={project.image}
                   alt={`${project.title} — desktop view`}
-                  className="absolute inset-0 w-full h-full object-contain object-top"
+                  className="object-contain object-top"
                 />
               </div>
             </div>
@@ -142,10 +148,12 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
                 </div>
                 {/* Screen */}
                 <div className="relative aspect-[9/19] overflow-hidden bg-neutral-900">
-                  <img
+                  <Image
+                    fill
+                    sizes="(max-width: 768px) 100vw, 175px"
                     src={project.imageMobile}
                     alt={`${project.title} — mobile view`}
-                    className="absolute inset-0 w-full h-full object-cover object-top"
+                    className="object-cover object-top"
                   />
                 </div>
                 {/* Home indicator */}

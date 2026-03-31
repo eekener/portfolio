@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import { motion, useReducedMotion } from "motion/react";
 
 export type Testimonial = {
@@ -51,7 +52,7 @@ export const TestimonialsColumn = (props: {
         <div className="flex items-center gap-2 mt-5">
           {image ? (
             <div className="relative h-10 w-10 shrink-0">
-              <img
+              <Image
                 width={40}
                 height={40}
                 src={image}

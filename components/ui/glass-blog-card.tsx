@@ -6,6 +6,7 @@ import { Card } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
 import { motion, useReducedMotion } from 'framer-motion';
 import { ArrowRight, Clock } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
 
 interface GlassBlogCardProps {
@@ -44,10 +45,12 @@ export function GlassBlogCard({
 
         {/* Image */}
         <div className="relative aspect-[16/9] overflow-hidden">
-          <img
+          <Image
+            fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             src={image}
             alt={title}
-            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-60 transition-opacity duration-300 group-hover:opacity-40" />
 

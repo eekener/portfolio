@@ -209,11 +209,7 @@ export default function Page() {
                   <HoverSliderImage
                     index={index}
                     imageUrl={slide.imageUrl}
-                    src={slide.imageUrl}
-                    alt={slide.title}
-                    className="size-full max-h-80 object-cover rounded-lg"
-                    loading="eager"
-                    decoding="async"
+                    className="size-full max-h-80 rounded-lg"
                   />
                 </div>
               ))}
