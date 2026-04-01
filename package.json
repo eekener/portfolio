@@ -31,7 +31,7 @@
   "browserslist": [
     "chrome >= 87",
     "firefox >= 78",
-    "safari >= 14",
+    "safari >= 12",
     "edge >= 88"
   ],
   "devDependencies": {
