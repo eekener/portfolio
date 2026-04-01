@@ -81,7 +81,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
                 el.innerHTML = '<b style="color:#fff;font-size:14px;">ekener.dev — JS diagnostic</b>\\n\\n';
                 document.body ? document.body.appendChild(el) : document.addEventListener('DOMContentLoaded', function(){ document.body.appendChild(el); });
               }
-              el.innerHTML += (err && err.stack ? err.stack : msg) + '\\n\\n--- src: ' + src + ':' + line + ':' + col + '\\n\\n';
+              el.innerHTML += 'MSG: ' + msg + '\\n' + (err && err.stack ? 'STACK: ' + err.stack : '') + '\\n--- src: ' + src + ':' + line + ':' + col + '\\n\\n';
             }
             window.onerror = function(msg, src, line, col, err) { showErr(msg, src, line, col, err); return false; };
             window.onunhandledrejection = function(e) { showErr('UnhandledRejection: ' + (e.reason && e.reason.stack ? e.reason.stack : String(e.reason)), '(promise)', 0, 0, null); };
