@@ -10,8 +10,12 @@ export function CookieConsent() {
 
   React.useEffect(() => {
     const show = () => {
-      const stored = localStorage.getItem('cookie-consent');
-      if (!stored) setVisible(true);
+      try {
+        const stored = localStorage.getItem('cookie-consent');
+        if (!stored) setVisible(true);
+      } catch {
+        // localStorage blocked by Safari privacy settings — skip consent banner
+      }
     };
     if ('requestIdleCallback' in window) {
       (window as Window & { requestIdleCallback: (cb: () => void, opts?: { timeout: number }) => void })
@@ -22,9 +26,12 @@ export function CookieConsent() {
   }, []);
 
   const respond = (value: 'accepted' | 'declined') => {
-    localStorage.setItem('cookie-consent', value);
-    // Notify other tabs / GA loader
-    window.dispatchEvent(new StorageEvent('storage', { key: 'cookie-consent', newValue: value }));
+    try {
+      localStorage.setItem('cookie-consent', value);
+      window.dispatchEvent(new StorageEvent('storage', { key: 'cookie-consent', newValue: value }));
+    } catch {
+      // localStorage blocked — ignore
+    }
     setVisible(false);
   };
 

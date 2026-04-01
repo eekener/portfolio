@@ -11,7 +11,13 @@ export function GoogleAnalytics({ measurementId }: GoogleAnalyticsProps) {
   const [hasConsent, setHasConsent] = React.useState(false);
 
   React.useEffect(() => {
-    const check = () => setHasConsent(localStorage.getItem('cookie-consent') === 'accepted');
+    const check = () => {
+      try {
+        setHasConsent(localStorage.getItem('cookie-consent') === 'accepted');
+      } catch {
+        // localStorage blocked by Safari privacy settings — no analytics
+      }
+    };
     check();
 
     const handleStorage = (e: StorageEvent) => {
