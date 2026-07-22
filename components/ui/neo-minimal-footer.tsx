@@ -64,8 +64,7 @@ export function NeoMinimalFooter() {
               <FooterMark />
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed max-w-sm">
-              Building fast, accessible, and beautifully crafted web experiences.
-              Let&apos;s build something great together.
+              I build custom Gutenberg blocks, FSE themes, and WordPress plugins. Let&apos;s build something great together.
             </p>
 
           </div>

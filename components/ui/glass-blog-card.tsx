@@ -19,6 +19,7 @@ interface GlassBlogCardProps {
   readTime: string;
   tags: string[];
   className?: string;
+  priority?: boolean;
 }
 
 export function GlassBlogCard({
@@ -31,6 +32,7 @@ export function GlassBlogCard({
   readTime,
   tags,
   className,
+  priority,
 }: GlassBlogCardProps) {
   const shouldReduceMotion = useReducedMotion();
   return (
@@ -50,6 +52,7 @@ export function GlassBlogCard({
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             src={image}
             alt={title}
+            priority={priority}
             className="object-cover transition-transform duration-500 group-hover:scale-105"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-60 transition-opacity duration-300 group-hover:opacity-40" />

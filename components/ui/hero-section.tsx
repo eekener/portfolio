@@ -46,7 +46,7 @@ export function HeroSection() {
         Emre Ekener
         <br />
         <span className="bg-gradient-to-r from-white to-white/60 bg-clip-text text-transparent">
-          WordPress Developer
+          WordPress Engineer
         </span>
       </motion.h1>
 
@@ -54,9 +54,7 @@ export function HeroSection() {
         variants={itemVariants}
         className="mb-8 max-w-2xl text-lg text-foreground/70"
       >
-        WordPress developer focused on building fast, accessible, and
-        beautifully detailed web experiences. I turn ideas into products
-        that scale.
+        I build custom Gutenberg blocks, FSE themes, and WordPress plugins for businesses that have outgrown generic page builders.
       </motion.p>
 
       <motion.div variants={itemVariants} className="flex gap-4">

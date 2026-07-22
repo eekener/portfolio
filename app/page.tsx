@@ -8,7 +8,7 @@ import { NeoMinimalFooter } from '@/components/ui/neo-minimal-footer';
 import { AnimatedSection } from '@/components/ui/animated-section';
 import { ProjectList } from '@/components/ui/project-list';
 import { buttonVariants } from '@/components/ui/button';
-import { Code2, Layers, Zap, Shield, Wrench, ShoppingCart, Mail } from 'lucide-react';
+import { Layout, Puzzle, Zap, Palette, Plug, ShoppingCart, Mail } from 'lucide-react';
 
 const TestimonialsColumn = dynamic(
   () => import('@/components/ui/testimonials-columns').then((m) => ({ default: m.TestimonialsColumn })),
@@ -21,21 +21,20 @@ const ContactForm = dynamic(
 // ─── Data ────────────────────────────────────────────────
 
 const SLIDES = [
-  { id: 'slide-1', title: 'Web UI-UX Design',        imageUrl: 'https://images.unsplash.com/photo-1559028012-481c04fa702d?q=80&w=2400&auto=format&fit=crop' },
-  { id: 'slide-2', title: 'Design to Website',       imageUrl: 'https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=2400&auto=format&fit=crop' },
-  { id: 'slide-3', title: 'Web Development',         imageUrl: 'https://images.unsplash.com/photo-1607798748738-b15c40d33d57?q=80&w=2400&auto=format&fit=crop' },
-  { id: 'slide-4', title: 'Maintenance & Updates',   imageUrl: 'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2400&auto=format&fit=crop' },
-  { id: 'slide-5', title: 'Speed Optimization',      imageUrl: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2400&auto=format&fit=crop' },
-  { id: 'slide-6', title: 'Custom Functionality',    imageUrl: 'https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=2400&auto=format&fit=crop' },
+  { id: 'slide-1', title: 'Custom Gutenberg Blocks',        imageUrl: 'https://images.unsplash.com/photo-1593720213428-28a5b9e94613?q=80&w=2400&auto=format&fit=crop' },
+  { id: 'slide-2', title: 'FSE Theme Development',       imageUrl: 'https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=2400&auto=format&fit=crop' },
+  { id: 'slide-3', title: 'Plugin Development',         imageUrl: 'https://images.unsplash.com/photo-1607798748738-b15c40d33d57?q=80&w=2400&auto=format&fit=crop' },
+  { id: 'slide-4', title: 'Design to WordPress',   imageUrl: 'https://images.unsplash.com/photo-1559028012-481c04fa702d?q=80&w=2400&auto=format&fit=crop' },
+  { id: 'slide-5', title: 'WooCommerce Development',      imageUrl: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2400&auto=format&fit=crop' },
 ];
 
 const features = [
-  { title: 'Custom Themes',      icon: Layers,        description: 'Pixel-perfect WordPress themes built from scratch — fully tailored to your brand and business goals.' },
-  { title: 'Custom Development', icon: Code2,         description: 'Custom plugins and code snippets to add any functionality your site needs, cleanly and without bloat.' },
-  { title: 'Bug Fixing',         icon: Wrench,        description: 'Fast diagnosis and resolution of WordPress issues, errors, and broken functionality — no matter how complex.' },
-  { title: 'WooCommerce',        icon: ShoppingCart,  description: 'Full e-commerce builds with custom product pages, checkout flows, and third-party payment integrations.' },
-  { title: 'Performance',        icon: Zap,           description: 'Core Web Vitals optimisation, caching, and image compression for faster load times and better search rankings.' },
-  { title: 'Security',           icon: Shield,        description: 'Hardening, regular updates, backups, and malware monitoring to keep your WordPress site safe and online.' },
+  { title: 'Gutenberg Blocks',      icon: Puzzle,        description: 'Custom blocks built with React and block.json — tailored to your content needs and fully integrated with the block editor.' },
+  { title: 'FSE Theme Development', icon: Layout,         description: 'Full Site Editing themes built from scratch using theme.json, block patterns, and template parts — no page builders, no shortcuts.' },
+  { title: 'Plugin Development',         icon: Plug,        description: 'Custom WordPress plugins built clean, well-documented, and maintainable — from simple utility plugins to complex integrations.' },
+  { title: 'WooCommerce',        icon: ShoppingCart,  description: 'Custom store builds, product pages, checkout flows, and third-party payment integrations built to scale.' },
+  { title: 'Performance',        icon: Zap,           description: 'Core Web Vitals optimisation, server-side caching, and asset management for measurably faster WordPress sites.' },
+  { title: 'Design to WordPress',           icon: Palette,        description: 'Figma designs translated pixel-perfect into block-based WordPress builds — clean code, no bloat.' },
 ];
 
 const testimonials = [

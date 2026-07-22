@@ -11,36 +11,37 @@ const geistMono = Geist_Mono({ variable: '--font-geist-mono', subsets: ['latin']
 export const metadata: Metadata = {
   metadataBase: new URL('https://ekener.dev'),
   title: {
-    default: 'Emre Ekener — WordPress Developer & Designer',
+    default: 'Emre Ekener — WordPress Engineer',
     template: '%s | Emre Ekener',
   },
   description:
-    'Freelance WordPress developer based in Germany. I build fast, accessible, and beautifully crafted WordPress websites and WooCommerce stores.',
+    'Freelance WordPress Engineer specialising in custom Gutenberg blocks, FSE theme development, and plugin development. Built for businesses that have outgrown generic page builders.',
   keywords: [
-    'WordPress developer',
+    'Gutenberg block developer',
+    'custom Gutenberg blocks',
+    'FSE theme development',
+    'Full Site Editing WordPress',
+    'WordPress plugin development',
+    'freelance WordPress engineer',
+    'custom WordPress development',
     'WooCommerce developer',
-    'freelance WordPress developer',
-    'WordPress speed optimisation',
-    'WordPress developer Germany',
-    'custom WordPress themes',
-    'WordPress maintenance',
   ],
   authors: [{ name: 'Emre Ekener', url: 'https://ekener.dev' }],
   creator: 'Emre Ekener',
   openGraph: {
     type: 'website',
-    locale: 'en_GB',
+    locale: 'en_US',
     url: 'https://ekener.dev',
-    siteName: 'Emre Ekener — WordPress Developer',
-    title: 'Emre Ekener — WordPress Developer & Designer',
+    siteName: 'Emre Ekener — WordPress Engineer',
+    title: 'Emre Ekener — WordPress Engineer',
     description:
-      'Freelance WordPress developer based in Germany. I build fast, accessible, and beautifully crafted WordPress websites and WooCommerce stores.',
+      'Freelance WordPress Engineer specialising in custom Gutenberg blocks, FSE theme development, and plugin development. Built for businesses that have outgrown generic page builders.',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Emre Ekener — WordPress Developer & Designer',
+    title: 'Emre Ekener — WordPress Engineer',
     description:
-      'Freelance WordPress developer based in Germany. I build fast, accessible, and beautifully crafted WordPress websites and WooCommerce stores.',
+      'Freelance WordPress Engineer specialising in custom Gutenberg blocks, FSE theme development, and plugin development. Built for businesses that have outgrown generic page builders.',
     creator: '@EmreEkener07',
   },
   robots: {

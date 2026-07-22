@@ -5,21 +5,21 @@ import { GlassBlogCard } from '@/components/ui/glass-blog-card';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Blog — WordPress Development & WooCommerce Tips',
+  title: 'Blog — Gutenberg Block & WordPress Development',
   description:
-    'Practical guides on WordPress development, WooCommerce, performance optimisation, and web security from Emre Ekener — freelance WordPress developer based in Germany.',
+    'Practical guides on custom Gutenberg block development, FSE themes, WordPress plugin development, and modern WordPress engineering from Emre Ekener.',
   openGraph: {
-    title: 'Blog — WordPress Development & WooCommerce Tips',
+    title: 'Blog — Gutenberg Block & WordPress Development',
     description:
-      'Practical guides on WordPress development, WooCommerce, performance optimisation, and web security.',
+      'Practical guides on custom Gutenberg block development, FSE themes, WordPress plugin development, and modern WordPress engineering from Emre Ekener.',
     url: '/blog',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Blog — WordPress Development & WooCommerce Tips',
+    title: 'Blog — Gutenberg Block & WordPress Development',
     description:
-      'Practical guides on WordPress development, WooCommerce, performance optimisation, and web security.',
+      'Practical guides on custom Gutenberg block development, FSE themes, WordPress plugin development, and modern WordPress engineering from Emre Ekener.',
   },
 };
 
@@ -36,7 +36,7 @@ export default async function BlogPage() {
           <span className="text-sm text-muted-foreground font-mono tracking-widest uppercase">Writing</span>
           <h1 className="text-5xl md:text-6xl font-bold tracking-tighter mt-2 mb-4">Blog</h1>
           <p className="text-muted-foreground text-lg max-w-xl leading-relaxed">
-            Thoughts on WordPress development, WooCommerce, performance, and the craft of building for the web.
+            Thoughts on Gutenberg block development, FSE themes, WordPress plugins, and the craft of building for the web.
           </p>
         </section>
 
@@ -45,7 +45,7 @@ export default async function BlogPage() {
         {/* Grid */}
         <section aria-label="Blog posts" className="mx-auto max-w-5xl px-4 py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {posts.map((post) => (
+            {posts.map((post, index) => (
               <GlassBlogCard
                 key={post.slug}
                 slug={post.slug}
@@ -56,6 +56,7 @@ export default async function BlogPage() {
                 date={post.date}
                 readTime={post.readTime}
                 tags={post.tags}
+                priority={index === 0}
               />
             ))}
           </div>
