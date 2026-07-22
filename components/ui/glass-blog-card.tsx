@@ -43,6 +43,11 @@ export function GlassBlogCard({
       transition={{ duration: 0.4 }}
       className={cn('w-full', className)}
     >
+      <Link
+            href={`/blog/${slug}`}
+            aria-label={`Read article: ${title}`}
+            className="block h-full"
+          >
       <Card className="group relative h-full overflow-hidden rounded-2xl border-border/50 bg-card/30 backdrop-blur-md transition-all duration-300 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 p-0 flex flex-col">
 
         {/* Image */}
@@ -95,16 +100,15 @@ export function GlassBlogCard({
           </div>
 
           {/* CTA button — bottom, small */}
-          <Link
-            href={`/blog/${slug}`}
-            aria-label={`Read article: ${title}`}
+          <span
             className="self-start inline-flex items-center gap-1.5 text-xs font-medium text-foreground/80 hover:text-primary transition-colors group/btn"
           >
             Read Article
             <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover/btn:translate-x-0.5" aria-hidden="true" />
-          </Link>
+          </span>
         </div>
       </Card>
+      </Link>
     </motion.div>
   );
 }
