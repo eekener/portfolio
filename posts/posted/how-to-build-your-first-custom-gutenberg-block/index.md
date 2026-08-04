@@ -3,7 +3,7 @@ title: "How to Build Your First Custom Gutenberg Block from Scratch"
 slug: "how-to-build-your-first-custom-gutenberg-block"
 metaTitle: "How to Build Your First Custom Gutenberg Block from Scratch"
 metaDescription: "A step-by-step guide to building your first custom Gutenberg block using @wordpress/create-block, JSX, and modern block development practices."
-date: "2026-07-28"
+date: "2026-08-04"
 coverImage: "https://res.cloudinary.com/ashxks55/image/upload/v1785847104/javascript-code_jz1mhb.jpg"
 tags: ["WordPress", "Gutenberg"]
 ---
