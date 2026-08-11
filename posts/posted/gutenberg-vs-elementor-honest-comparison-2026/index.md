@@ -34,7 +34,7 @@ These are real advantages and I will not pretend they are not.
 
 This is the most measurable difference between the two and the numbers are not close.
 
-![PageSpeed Insights showing a performance score of 41 on an Elementor built WordPress site](https://res.cloudinary.com/ashxks55/image/upload/v1784716633/lighthouse-test_q0siez.png "PageSpeed score of 41 on a real Elementor site tested in 2026")
+![Custom Gutenberg block in the Site Editor showing editable fields in the block sidebar](https://res.cloudinary.com/ashxks55/image/upload/v1785847104/custom-block_rem8ga.png "A custom banner block built with Gutenberg showing editable fields directly in the WordPress editor")
 
 A performance score of 41. First Contentful Paint at 9.2 seconds. Largest Contentful Paint at 16.4 seconds. This is a real site tested in 2026, not a worst case scenario constructed to make a point. This is what an average Elementor site looks like under a real performance audit.
 
