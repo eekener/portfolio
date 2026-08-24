@@ -7,3 +7,9 @@
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
+
+[[redirects]]
+  from = "http://www.ekener.dev/*"
+  to = "https://ekener.dev/:splat"
+  status = 301
+  force = true
