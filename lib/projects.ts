@@ -485,26 +485,6 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: 'postdoc-israel',
-    client: 'Postdoc Israel',
-    title: 'Figma Design, Custom Database & Ongoing Management',
-    desc: 'Full design-to-development project with a custom WordPress build, bespoke database functionality, and ongoing site management to keep the platform running smoothly.',
-    services: ['Web Development', 'Web Design', 'Custom Functionality'],
-    tags: ['WordPress', 'PHP', 'MySQL', 'Figma'],
-    image: '/projects/postdoc-israel.webp',
-    imageMobile: '/projects/postdoc-israel-mobile.webp',
-    year: '2025',
-    challenge:
-      'The client needed a professional site built from a Figma design, but the core requirement went beyond a standard WordPress implementation — they needed a custom database solution integrated directly into the site to manage and display structured data specific to their platform. On top of that, they required a reliable ongoing management partner after launch.',
-    solution:
-      'Designed the full site in Figma and implemented it into a WordPress template, applying template customisations to support the specific functionality required. Built a custom database structure and integrated it into the site, giving the client a tailored way to manage and present their data. Post-launch, continued managing the site — handling updates, monitoring, and any ongoing development needs to keep the platform current and functional.',
-    results: [
-      { metric: 'Custom DB', value: 'Built' },
-      { metric: 'Design', value: 'Implemented' },
-      { metric: 'Ongoing', value: 'Active' },
-    ],
-  },
-  {
     slug: 'agilio',
     client: 'Agilio Software',
     title: 'Figma Design & WordPress Implementation',
