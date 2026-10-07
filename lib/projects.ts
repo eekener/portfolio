@@ -54,7 +54,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: 'kamerakoulu',
+    slug: 'photography-website',
     client: 'Kamerakoulu',
     title: 'Style Customisations & Bug Fixes',
     desc: 'Tailored a WordPress theme through targeted style customisations and resolved outstanding bugs left unaddressed by the original template developers.',
@@ -151,7 +151,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: 'mkg-plus',
+    slug: 'dentist-website',
     client: 'MKG Plus',
     title: 'Figma Design, WordPress Build & Custom Functionality',
     desc: 'End-to-end project from Figma design through to WordPress implementation, with custom functionality development, bug fixes, styling refinements, and performance optimisation.',
@@ -229,7 +229,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: 'ezsignsonline',
+    slug: 'sign-company',
     client: 'EZSignsOnline',
     title: 'Maintenance, Speed & Full SEO Optimisation',
     desc: 'Ongoing WordPress maintenance combined with a comprehensive SEO overhaul — covering on-page, technical, and off-page optimisation to improve visibility and organic traffic.',
@@ -306,7 +306,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: 'borciano-london',
+    slug: 'cosmetics-studio',
     client: 'Borciano London',
     title: 'Custom Figma Design, WooCommerce Shop & Migration',
     desc: 'End-to-end project from Figma design to a custom WordPress template with a fully configured WooCommerce shop, completed with a smooth migration to the client\'s hosting environment.',
@@ -366,7 +366,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: 'stedtnitz',
+    slug: 'coaching-company',
     client: 'Stedtnitz',
     title: 'Custom Figma Design, WooCommerce Shop & Migration',
     desc: 'Full project from custom Figma design through to a WordPress build with WooCommerce shop, completed with migration to the client\'s hosting environment.',
@@ -405,7 +405,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: 'pmckm',
+    slug: 'architecture-studio-2',
     client: 'PMCKM Architects',
     title: 'Custom Figma Design & WordPress Build',
     desc: 'Bespoke Figma design translated into a custom WordPress template for an architecture firm — delivering a refined and professional online presence.',
@@ -465,7 +465,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: 'mcknhm',
+    slug: 'architecture-studio',
     client: 'MCKNHM Architects',
     title: 'Custom Figma Design & WordPress Build',
     desc: 'Bespoke Figma design converted into a custom WordPress template for an architecture firm — a precise and professional digital presence built to reflect their work.',
@@ -485,7 +485,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: 'agilio',
+    slug: 'softwarecompany',
     client: 'Agilio Software',
     title: 'Figma Design & WordPress Implementation',
     desc: 'Custom Figma design translated into a clean and professional WordPress site for a software company — built to communicate credibility and product clarity.',
@@ -505,7 +505,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: 'kleverkey',
+    slug: 'businesswebsite',
     client: 'Kleverykey',
     title: 'Figma Design & WordPress Implementation',
     desc: 'Custom Figma design brought to life in WordPress — a tailored site built to match the brand and present the product clearly and professionally.',
@@ -545,7 +545,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: 'designthinkingcoach',
+    slug: 'coachingwebsite',
     client: 'Designthinkingcoach',
     title: 'Figma Design & WordPress Implementation',
     desc: 'Custom Figma design translated into a WordPress template — a clean, professional site built to support a design thinking coach\'s online presence.',
@@ -585,7 +585,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: 'herbigco',
+    slug: 'financewebsite',
     client: 'Herbig Co',
     title: 'Figma Design & WordPress Implementation',
     desc: 'Custom Figma design brought to life in WordPress — a tailored and professional site built to represent the Herbig Co brand online.',
