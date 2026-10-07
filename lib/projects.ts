@@ -565,7 +565,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: 'crushfanzine',
+    slug: 'magazinewebsite',
     client: 'Crush Fanzine',
     title: 'Figma Design & WordPress Implementation',
     desc: 'Custom Figma design implemented into a WordPress template — a distinctive and editorial site built to reflect the character of an independent fanzine.',
